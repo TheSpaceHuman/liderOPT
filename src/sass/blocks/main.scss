@@ -1,0 +1,118 @@
+//MAIN
+.main-index {
+  background-color: #f1f6f9;
+}
+.catalog .container {
+  background-color: white;
+}
+.catalog_items {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 25px;
+}
+.catalog_item {
+  position: relative;
+  flex: 0 1 33%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.catalog_item_img-wrapper img {
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.catalog_item .text {
+  font-size: 23px;
+  font-weight: 300;
+  line-height: 26px;
+  color: #384955;
+  text-align: center;
+}
+.catalog_item_img-wrapper {
+  padding: 45px 0;
+}
+.catalog_item_text {
+  padding-bottom: 65px;
+}
+.catalog_item_hover {
+  display: none;
+  background-color: $dark-red;
+  color: #fff;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 5px;
+  &_title {
+    position: relative;
+    font-size: 23px;
+    font-weight: 300;
+    line-height: 26px;
+    margin-top: 70px;
+  }
+  &_title:before {
+    content: "";
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    right: 30%;
+  }
+  &_categoris ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 70px 0;
+    padding: 0 45px;
+  }
+  &_categoris li {
+    flex: 1 1 50%;
+    padding: 10px;
+  }
+  &_button .btn-white {
+    color: #050505;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    background-color: #fff;
+    border-radius: 3px;
+    margin-bottom: 37px;
+  }
+}
+.catalog_item:hover .catalog_item_hover {
+  display: flex;
+}
+.catalog_item:hover .catalog_item_img-wrapper,
+.catalog_item:hover .catalog_item_text {
+  display: none;
+}
+.btn-white {
+  color: #050505;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  background-color: #fff;
+  border-radius: 3px;
+  margin: 25px 0;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  //transition: box-shadow 0.3s ease-in-out;
+}
+.btn-white:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.title-2 {
+  color: #384955;
+  font-size: 36px;
+  font-weight: 300;
+  //line-height: 26px;
+  text-align: center;
+  padding: 55px 0;
+}
+.special-offer {
+  margin-top: 96px;
+}
+.special-offer .container {
+  background-color: #fff;
+}

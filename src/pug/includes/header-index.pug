@@ -1,0 +1,78 @@
+section.top-menu
+    .container
+        .row
+            nav.navbar.navbar-expand-md.navbar-light.p-0
+                a.navbar-brand.py-3(href="#")
+                    p.brand_title Лидер<span>ОПТ</span>
+                    p.brand_description кровати металлические
+                button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+                    span.navbar-toggler-icon
+
+                .collapse.navbar-collapse#navbarSupportedContent
+                    ul.navbar-nav
+                        li.nav-item
+                            a.nav-link Главная
+                        li.nav-item.active
+                            .dropdown
+                                a.nav-link#dropdown2(href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Каталог
+                                .dropdown-menu(aria-labelledby="dropdown2")
+                                    a.dropdown-item(href="#") Комплектующие
+                                    a.dropdown-item(href="#") Матрасы
+                                    a.dropdown-item(href="#") Одеяла
+                                    a.dropdown-item(href="#") Подушки
+                                    a.dropdown-item(href="#") Постельное бельё
+                                    a.dropdown-item(href="#") Постельные комплекты
+                                    a.dropdown-item(href="#") Пледы
+                                    a.dropdown-item(href="#") Покрывала
+                                    a.dropdown-item(href="#") Табуреты
+                                    a.dropdown-item(href="#") Тумбы прикроватные
+                                    a.dropdown-item(href="#") Стулья
+                                    a.dropdown-item(href="#") Скамейки Банкетки
+                                    a.dropdown-item(href="#") Столы
+                                    a.dropdown-item(href="#") Вешалки
+                                    a.dropdown-item(href="#") Шкафы
+                        li.nav-item
+                            a.nav-link(href="#") Компания
+                        li.nav-item
+                            a.nav-link(href="#") Доставка
+                        li.nav-item
+                            a.nav-link(href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Акции
+                        li.nav-item
+                            a.nav-link(href="#") Контакты
+                    .info-menu
+                        .top-menu_phone
+                            .icon.icon-phone
+                            .icon.icon-whatsapp
+                            .icon.icon-viber
+                            a(href="tel:+79255501265") +7 925 550-12-65
+                        .top-menu_message
+                            .icon-first
+                            p.text Мы первые
+                        .top-menu_search
+                            i.fas.fa-search
+                        .top-menu_shopping-cart
+
+secrion.top-slider
+    .container
+        h1.title-1.d-none ЛидерОПТ
+        .index-slider
+            - for (var n = 0; n < 4; n++)
+                div
+                    .index-slider_item
+                        .index-slider_left-block
+                            .index-slider_text
+                                p.index-slider_text_title металлические <span>кровати</span>
+                                p.index-slider_text_price от <span>890</span> <i class="fas fa-ruble-sign"></i>
+                                p.index-slider_text_description Купить металлические кровати недорого в розницу по оптовым ценам производителя.
+                                .index-slider_text_buttons
+                                    a.link-def(href="#") Подробно
+                                    button.btn.btn-dark-red Перейти в каталог
+                            .index-slider_intro
+                                .index-slider_intro_img
+                                    img(src="img/index/Layer_21.jpg" alt="Интерьер с кроватью").lazyload
+                                .index-slider_intro_text
+                                    p.title Наши кровати
+                                    p.text Наши кровати закуплены в московский центр здоровья «Москва»
+                        .index-slider_right-block
+                            .index-slider_wrapper-img
+                                img(src="img/index/final.png" alt="Кровать-2202").lazyload
