@@ -151,23 +151,26 @@ section.special-offer
     .container
         h2.title-2 Специальное предложение
         .goods-slider
-            - for (var x = 0; x < 4; x++)
+            - for (var x = 0; x < 9; x++)
                 div
-                    .goods-slider_item.animated
+                    .goods-slider_item
+                        .slider-sale
                         .goods-slider_top-text
                             .goods-slider_top-text_title Кровать металлическая
                             .goods-slider_top-text_intro-title двухъярусная Эконом
                         .goods-slider_img
                             img(src="img/index/slider-goods/2.png" alt="good").lazyload
                         .goods-slider_price
-                            p.old-price от <span>1200</span>
-                            p.main-price от <span>960</span>
+                            p.old-price от <span>1200</span> <i class="fas fa-ruble-sign"></i>
+                            p.main-price от <span>960</span> <i class="fas fa-ruble-sign"></i>
                         .goods-slider_description
                             p основание: труба 40х20 мм сварная сетка - ячейки 100x100
                         .goods-slider_controls
                             p Опт от
                             input.counter(type="text")
-                            button.btn.btn-dark-red
+                            button.btn-plus
+                            button.btn-minus
+                            button.btn.btn-dark-red.shop
 
 section.advantages
     .container
@@ -208,8 +211,8 @@ section.sale
     .container
         h2.title-2 Хиты продаж
         .goods-slider
-            div
-                - for (var x = 0; x < 4; x++)
+            - for (var x = 0; x < 4; x++)
+                div
                 .goods-slider_item.animated
                     .goods-slider_top-text
                         .goods-slider_top-text_title Кровать металлическая
