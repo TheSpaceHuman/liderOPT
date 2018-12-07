@@ -1,62 +1,90 @@
-section.top-menu
+section.top-menu.fixed-top
     .container
         .row
-            nav.navbar.navbar-expand-md.navbar-light.p-0
+            nav.navbar.navbar-expand-md.navbar-light
                 a.navbar-brand.py-3(href="#")
                     p.brand_title Лидер<span>ОПТ</span>
                     p.brand_description кровати металлические
-                button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
-                    span.navbar-toggler-icon
+                button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation") <i class="fas fa-bars"></i>
+
 
                 .collapse.navbar-collapse#navbarSupportedContent
                     ul.navbar-nav
-                        li.nav-item
-                            a.nav-link Главная
                         li.nav-item.active
+                            a.nav-link(href="#") Главная
+                        li.nav-item
                             .dropdown
                                 a.nav-link#dropdown2(href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Каталог
                                 .dropdown-menu(aria-labelledby="dropdown2")
-                                    a.dropdown-item(href="#") Комплектующие
-                                    a.dropdown-item(href="#") Матрасы
-                                    a.dropdown-item(href="#") Одеяла
-                                    a.dropdown-item(href="#") Подушки
-                                    a.dropdown-item(href="#") Постельное бельё
-                                    a.dropdown-item(href="#") Постельные комплекты
-                                    a.dropdown-item(href="#") Пледы
-                                    a.dropdown-item(href="#") Покрывала
-                                    a.dropdown-item(href="#") Табуреты
-                                    a.dropdown-item(href="#") Тумбы прикроватные
-                                    a.dropdown-item(href="#") Стулья
-                                    a.dropdown-item(href="#") Скамейки Банкетки
-                                    a.dropdown-item(href="#") Столы
-                                    a.dropdown-item(href="#") Вешалки
-                                    a.dropdown-item(href="#") Шкафы
+                                    a.dropdown-item(href="#") Кровати металлические
+                                    a.dropdown-item(href="#") Постельные принадлежности
+                                    a.dropdown-item(href="#") Мебель ДСП
+                                    a.dropdown-item(href="#") Пружинные матрасы
+                                    a.dropdown-item(href="#") Стулья-кресла офисные
+                                    a.dropdown-item(href="#") Мебель на металл каркасе
                         li.nav-item
                             a.nav-link(href="#") Компания
                         li.nav-item
                             a.nav-link(href="#") Доставка
                         li.nav-item
-                            a.nav-link(href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Акции
+                            a.nav-link(href="#") Акции
                         li.nav-item
                             a.nav-link(href="#") Контакты
                     .info-menu
                         .top-menu_phone
-                            .icon.icon-phone
-                            .icon.icon-whatsapp
-                            .icon.icon-viber
+                            <i class="fas fa-phone fa-rotate-90 px-2"></i>
+                            <i class="fab fa-whatsapp px-1"></i>
+                            <i class="fab fa-viber px-1"></i>
                             a(href="tel:+79255501265") +7 925 550-12-65
                         .top-menu_message
                             .icon-first
                             p.text Мы первые
-                        .top-menu_search
+                        button.btn.btn-search(data-toggle="modal" data-target="#searchModal")
                             i.fas.fa-search
-                        .top-menu_shopping-cart
+                        button.btn.btn-shopping-cart
+                            i.fas.fa-shopping-cart
+
+                .catalog-menu
+                    a.sidemenu-btn2(href="#" title="Меню") <i class="fa fa-bars"></i>
+                .sidemenu2
+                    a.close-menu2(href="#" title="") <i class="fa fa-times"></i>
+                    ul
+                        li.nav-item.active
+                            a.nav-link(href="#") Главная
+                        li.nav-item
+                            a(href="#") Каталог
+                            ul.drop-menu.animated.fadeIn
+                                li.nav-item.first
+                                    a(href="#") Кровати металлические
+                                li.nav-item
+                                    a(href="#") Постельные принадлежности
+                                li.nav-item
+                                    a(href="#") Мебель ДСП
+                                li.nav-item
+                                    a(href="#") Пружинные матрасы
+                                li.nav-item
+                                    a(href="#") Стулья-кресла офисные
+                                li.nav-item.last
+                                    a(href="#") Мебель на металл каркасе
+                        li.nav-item
+                            a(href="#") Компания
+                        li.nav-item
+                            a(href="#") Акции
+                        li.nav-item
+                            a(href="#") Контакты
+                    .sidemenu2_buttons
+                        button.btn.btn-search(data-toggle="modal" data-target="#searchModal")
+                            i.fas.fa-search
+                        button.btn.btn-shopping-cart
+                            i.fas.fa-shopping-cart
+
+
 
 secrion.top-slider
-    .container
+    .container-fluid
         h1.title-1.d-none ЛидерОПТ
         .index-slider
-            - for (var n = 0; n < 4; n++)
+             - for (var n = 0; n < 4; n++)
                 div
                     .index-slider_item
                         .index-slider_left-block

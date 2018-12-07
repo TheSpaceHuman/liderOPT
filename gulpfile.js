@@ -15,6 +15,11 @@ var run = require('run-sequence');
 var pug = require('gulp-pug');
 var clean = require('gulp-clean');
 var htmlbeautify = require('gulp-html-beautify');
+var uglify = require('gulp-uglify');
+// var pump = require('pump');
+var plumber = require('gulp-plumber');
+// var jshint = require('gulp-jshint');
+// var concat = require('gulp-concat');
 
 
 
@@ -105,24 +110,26 @@ gulp.task('copy', function () {
 
 gulp.task('js', function () {
   return gulp.src([
-    'src/js/**/*.js'
+    'src/js/*.js'
   ],{
     base:'src'
   })
+      .pipe(rename('js/script.js'))
+      .pipe(gulp.dest('build'))
+      .pipe(uglify())
+      .pipe(rename('js/script.min.js'))
       .pipe(gulp.dest('build'))
       .pipe(server.stream())
 });
 
-
 gulp.task('clean', function () {
-    return gulp.src('build')
-        .pipe(clean())
+  return gulp.src('build')
+      .pipe(clean())
 
 });
 
-
 gulp.task('build', function (callback) {
-  run('clean', 'copy', 'style', 'pug','js','sprite','imagemin', 'server', callback);
+  run('clean', 'copy', 'style', 'pug', 'js', 'sprite', 'webp', 'imagemin', 'server', callback);
 });
 
 
