@@ -150,12 +150,13 @@
 .goods-slider_item {
   display: flex;
   flex-direction: column;
-  margin: 15px;
+  margin: 20px 15px;
   padding: 25px;
   border-radius: 5px;
   background-color: #fff;
   position: relative;
   overflow: hidden;
+  //min-width: 285px;
 }
 .goods-slider_top-text {
   color: #384955;
@@ -484,4 +485,223 @@ input.counter::placeholder {
 }
 .goods-slider_item:hover .goods-slider_description_hiden {
   display: block;
+}
+.breadcrumb {
+  padding: 25px 0;
+  background-color: transparent;
+}
+.container-list {
+  background-color: #fff;
+  padding: 50px;
+  margin-bottom: 195px;
+ }
+.container-list_items {
+  display: flex;
+  flex-direction: column;
+}
+.container-list_item {
+  flex: 1 1 auto;
+  display: flex;
+  &_img {
+    flex: 1 1 20%;
+    min-width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: auto;
+      height: auto;
+      display: block;
+    }
+  }
+  &_text {
+    flex: 1 1 80%;
+    min-width: 320px;
+    color: #384955;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 32px;
+    margin-bottom: 35px;
+    strong {
+      color: #6a4255;
+      font-weight: 700;
+    }
+  }
+}
+.catalog-section_all {
+  //flex: 0 1 82%;
+  padding-bottom: 80px;
+}
+.catalog-section_all_items {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 285px;
+  .goods-slider_item {
+    flex: 1 1 20%;
+    min-width: 275px;
+  }
+}
+.sidebar {
+  //flex: 0 1 18%;
+  //min-width: 250px;
+  //padding: 0 10px;
+}
+.sidebar_title {
+  color: #384955;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 26px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(56, 73, 85, .07);
+}
+.sidebar_items {
+  margin-top: 35px;
+}
+.sidebar_item {
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(56, 73, 85, .07);
+  margin: 20px 0;
+  position: relative;
+}
+.sidebar_link::before {
+  content: "\f107";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #7b5265;
+  position: absolute;
+  top: 50%;
+  left: 95%;
+  transform: translateY(-50%);
+}
+.sidebar_link {
+  color: #384955;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  position: relative;
+  display: block;
+}
+.sidebar_link:hover,
+.sidebar_link:focus {
+  color: #7b5265;
+}
+.sidebar_item_colcollapse-items {
+  padding-left: 35px;
+  margin: 20px 0;
+}
+.sidebar_item_colcollapse-item {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 29px;
+  color: #384955;
+  border: none;
+
+}
+.poster-customer {
+  background-color: #fff;
+  &_title {
+    color: #384955;
+    font-size: 25px;
+    font-weight: 300;
+    position: relative;
+    display: block;
+    padding: 40px;
+  }
+  &_title::before {
+    content: "\f05a";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #7b5265;
+    position: absolute;
+    top: 50%;
+    left: 85%;
+    transform: translateY(-50%);
+  }
+  &_items {
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px 40px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &_item {
+    color: #7b5265;
+    font-size: 15px;
+    font-weight: 400;
+    position: relative;
+    margin-bottom: 15px;
+  }
+  &_item::before {
+    content: "";
+    width: 2px;
+    background-color: #7b5265;
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+    left: -10px;
+  }
+}
+.catalog-section_all_filter {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  align-items: baseline;
+  &_title {
+    color: #384955;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 29px;
+    padding: 8px;
+  }
+  &_lable {
+    color: #384955;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 29px;
+    padding: 8px;
+    margin: 0;
+
+  }
+  &_select {
+    color: #7b5265;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 26px;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    padding: 8px;
+    padding-right: 15px;
+    position: relative;
+    min-width: 90px;
+  }
+  &_select::after {
+    content: "\f107";
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #7b5265;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 4px;
+    background-color: transparent;
+  }
+  &_reset {
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    min-width: 90px;
+  }
+
+}
+select {
+  /* for Firefox */
+  -moz-appearance: none;
+  /* for Chrome */
+  -webkit-appearance: none;
+}
+
+/* For IE10 */
+select::-ms-expand {
+  display: none;
 }

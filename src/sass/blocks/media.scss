@@ -35,11 +35,15 @@
   .top-slider .container-fluid {
     padding: 0;
   }
+  .breadcrumb {
+    padding: 25px 10px;;
+  }
 }
 @media (min-width: 1500px) {
   .navbar {
     padding: 0;
   }
+
 }
 @media (max-width: 1300px) {
   .goods-slider {
@@ -156,6 +160,7 @@
       left: 81%;
     }
   }
+
 }
 @media (max-width: 600px) {
   .goods-slider {

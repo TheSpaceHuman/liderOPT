@@ -1,13 +1,20 @@
 //HEADER
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
 header {
 
 }
+
 .header-index {
   background-color: $blue-light;
-  padding-top: 120px;
+  padding-top: 109px;
 }
 .top-menu {
   background-color: $blue-light;
+}
+.top-menu.base-fon {
+  background-color: #f1f6f9;
 }
 .navbar-nav {
   margin-left: auto;
